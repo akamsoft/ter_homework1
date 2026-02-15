@@ -40,3 +40,13 @@ personal.auto.tfvars
 random_string_FAKE — неверное имя ресурса (есть только random_string)
 resulT — опечатка, должно быть result
 Исправление: name  = "example_${random_password.random_string.result}"
+
+5. Выполните код. В качестве ответа приложите: исправленный фрагмент кода и вывод команды docker ps
+
+![Alt text](images/1.5-1.jpg)
+
+![Alt text](images/1.5-2.jpg)
+
+![Alt text](images/1.5-3.jpg)
+
+![Alt text](images/1.5-4.jpg)
