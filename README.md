@@ -4,4 +4,12 @@
 ![Alt text](images/version.jpg)
 
 ## Задача 1
+1. Перейдите в каталог src. Скачайте все необходимые зависимости, использованные в проекте.
+cp .terraformrc ~/
+terrafrom init
+
+![Alt text](images/1.1-1.jpg)
+
+![Alt text](images/1.1-2.jpg)
+
 
