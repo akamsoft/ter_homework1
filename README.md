@@ -78,8 +78,8 @@ terraform destroy
 8. Объясните, почему при этом не был удалён docker-образ nginx:latest. Ответ ОБЯЗАТЕЛЬНО НАЙДИТЕ В ПРЕДОСТАВЛЕННОМ КОДЕ, а затем ОБЯЗАТЕЛЬНО ПОДКРЕПИТЕ строчкой из документации terraform провайдера docker. (ищите в классификаторе resource docker_image )
 
 Образ не удален из локального хранилища Docker при операции destroy, т.к. keep_locall = true. 
-Следует из документации:
-https://library.tf/providers/kreuzwerker/docker/latest/docs/resources/image
+Следует из документации: https://library.tf/providers/kreuzwerker/docker/latest/docs/resources/image
+
 keep_locally (Boolean) If true, then the Docker image won't be deleted on destroy operation. If this is false, it will delete the image from the docker local storage on destroy operation.
 
 ![Alt text](images/1.8.jpg)
