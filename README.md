@@ -64,4 +64,25 @@ terrafrom apply
 Опасность ключа -auto-approve
 Этот флаг обходит обязательный шаг ручного подтверждения плана изменений, показанного Terraform перед применением. В результате можно случайно уничтожить ресурсы (например, удалить базу данных), внести нежелательные модификации или потерять данные из-за ошибок в конфигурации, не успев их заметить. Особенно рискованно в production-средах, где изменения влияют на реальную инфраструктуру.
 
+Зачем нужен ключ:
+Он упрощает автоматизацию: идеален для CI/CD-пайплайнов, скриптов и неинтерактивных окружений (dev/test), где ручное подтверждение замедляет процесс.
+
+7. Уничтожьте созданные ресурсы с помощью terraform. Убедитесь, что все ресурсы удалены. Приложите содержимое файла terraform.tfstate.
+```
+terraform destroy
+```
+![Alt text](images/1.7-1.jpg)
+
+![Alt text](images/1.7-2.jpg)
+
+8. Объясните, почему при этом не был удалён docker-образ nginx:latest. Ответ ОБЯЗАТЕЛЬНО НАЙДИТЕ В ПРЕДОСТАВЛЕННОМ КОДЕ, а затем ОБЯЗАТЕЛЬНО ПОДКРЕПИТЕ строчкой из документации terraform провайдера docker. (ищите в классификаторе resource docker_image )
+
+Образ не удален из локального хранилища Docker при операции destroy, т.к. keep_locall = true. 
+Следует из документации:
+https://library.tf/providers/kreuzwerker/docker/latest/docs/resources/image
+keep_locally (Boolean) If true, then the Docker image won't be deleted on destroy operation. If this is false, it will delete the image from the docker local storage on destroy operation.
+
+![Alt text](images/1.8.jpg)
+
+
 
