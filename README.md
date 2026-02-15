@@ -45,6 +45,10 @@ resulT — опечатка, должно быть result
 
 ![Alt text](images/1.5-1.jpg)
 
+```
+terrafrom apply
+```
+
 ![Alt text](images/1.5-2.jpg)
 
 ![Alt text](images/1.5-3.jpg)
