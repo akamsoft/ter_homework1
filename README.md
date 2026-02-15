@@ -97,6 +97,16 @@ keep_locally (Boolean) If true, then the Docker image won't be deleted on destro
 
 https://docs.comcloud.xyz/providers/kreuzwerker/docker/latest/docs#remote-hosts
 
+Файл ~/.ssh/conf 
+```
+Host vm-yandex
+  HostName Имя ВМ в облаке
+  User alex
+  Port 22
+  IdentityFile ~/.ssh/id_ed25519
+  StrictHostKeyChecking no
+```
+
 4. Используя terraform и remote docker context, скачайте и запустите на вашей ВМ контейнер mysql:8 на порту 127.0.0.1:3306, передайте ENV-переменные. Сгенерируйте разные пароли через random_password и передайте их в контейнер, используя интерполяцию из примера с nginx.(name  = "example_${random_password.random_string.result}" , двойные кавычки и фигурные скобки обязательны!)
     environment:
       - "MYSQL_ROOT_PASSWORD=${...}"
