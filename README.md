@@ -175,7 +175,7 @@ resource "docker_container" "mysql" {
 ```
 
 ## Задача 3*
-1. Установите opentofu(fork terraform с лицензией Mozilla Public License, version 2.0) любой версии
+1. Установите opentofu (fork terraform с лицензией Mozilla Public License, version 2.0) любой версии
 
 ![Alt text](images/3.1.jpg)
   
