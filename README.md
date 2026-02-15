@@ -84,7 +84,7 @@ keep_locally (Boolean) If true, then the Docker image won't be deleted on destro
 
 ![Alt text](images/1.8.jpg)
 
-## Задача 2
+## Задача 2*
 1. Создайте в облаке ВМ. Сделайте это через web-консоль, чтобы не слить по незнанию токен от облака в github(это тема следующей лекции). Если хотите - попробуйте сделать это через terraform, прочитав документацию yandex cloud. Используйте файл personal.auto.tfvars и гитигнор или иной, безопасный способ передачи токена!
 
 ![Alt text](images/2.1.jpg)
@@ -173,6 +173,20 @@ resource "docker_container" "mysql" {
   restart = "always"
 }
 ```
+
+## Задача 3*
+1. Установите opentofu(fork terraform с лицензией Mozilla Public License, version 2.0) любой версии
+
+![Alt text](images/3.1.jpg)
+  
+3. Попробуйте выполнить тот же код с помощью tofu apply, а не terraform apply.
+
+![Alt text](images/3.2-1.jpg)
+
+![Alt text](images/3.2-2.jpg)
+
+![Alt text](images/3.2-3.jpg)
+
 
 
 
